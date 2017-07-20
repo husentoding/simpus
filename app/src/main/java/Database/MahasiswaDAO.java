@@ -1,4 +1,4 @@
-package pemula.simpus.database;
+package database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import pemula.simpus.model.Mahasiswa;
+import model.Mahasiswa;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

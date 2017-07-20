@@ -1,4 +1,4 @@
-package pemula.simpus.model;
+package model;
 
 import java.util.Date;
 

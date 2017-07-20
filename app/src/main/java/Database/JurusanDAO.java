@@ -1,4 +1,4 @@
-package pemula.simpus.database;
+package database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import pemula.simpus.model.Jurusan;
-import pemula.simpus.model.Universitas;
+import model.Jurusan;
+import model.Universitas;
 
 /**
  * Created by Evlive-Tenshi-PC on 7/5/2017.

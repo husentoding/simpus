@@ -1,4 +1,4 @@
-package pemula.simpus.model;
+package model;
 
 /**
  * Created by Evlive-Tenshi-PC on 7/5/2017.

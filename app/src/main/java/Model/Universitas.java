@@ -1,4 +1,4 @@
-package Model;
+package pemula.simpus.model;
 
 import java.util.Date;
 
@@ -8,12 +8,15 @@ import java.util.Date;
 
 public class Universitas {
 
-    private Integer idUniversitas;
+    private long idUniversitas;
     private String namaUniversitas;
     private String alamatUniversitas;
     private Date tglPenting;
     private String jlrMasuk;
     private String beritaPenting;
+
+    public Universitas() {
+    }
 
     public Universitas(String namaUniversitas, String alamatUniversitas, Date tglPenting, String jlrMasuk, String beritaPenting) {
         this.namaUniversitas = namaUniversitas;
@@ -23,11 +26,11 @@ public class Universitas {
         this.beritaPenting = beritaPenting;
     }
 
-    public Integer getIdUniversitas() {
+    public long getIdUniversitas() {
         return idUniversitas;
     }
 
-    public void setIdUniversitas(Integer idUniversitas) {
+    public void setIdUniversitas(long idUniversitas) {
         this.idUniversitas = idUniversitas;
     }
 

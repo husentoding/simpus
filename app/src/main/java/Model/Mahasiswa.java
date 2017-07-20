@@ -1,4 +1,4 @@
-package Model;
+package pemula.simpus.model;
 
 import java.util.Date;
 
@@ -8,13 +8,16 @@ import java.util.Date;
 
 public class Mahasiswa {
 
-    private Integer idMahasiswa;
+    private long idMahasiswa;
     private String emailMahasiswa;
     private String passwordMahasiswa;
     private String namaMahasiswa;
-    private char jenisKelaminMahasiswa;
+    private String jenisKelaminMahasiswa;
     private Date tglLahirMahasiswa;
     private String asalUniversitas;
+
+    public Mahasiswa() {
+    }
 
     public Mahasiswa(String emailMahasiswa, String passwordMahasiswa, String namaMahasiswa, String asalUniversitas) {
         this.emailMahasiswa = emailMahasiswa;
@@ -23,12 +26,28 @@ public class Mahasiswa {
         this.asalUniversitas = asalUniversitas;
     }
 
-    public Integer getIdMahasiswa() {
+    public long getIdMahasiswa() {
         return idMahasiswa;
     }
 
-    public void setIdMahasiswa(Integer idMahasiswa) {
+    public void setIdMahasiswa(long idMahasiswa) {
         this.idMahasiswa = idMahasiswa;
+    }
+
+    public String getJenisKelaminMahasiswa() {
+        return jenisKelaminMahasiswa;
+    }
+
+    public void setJenisKelaminMahasiswa(String jenisKelaminMahasiswa) {
+        this.jenisKelaminMahasiswa = jenisKelaminMahasiswa;
+    }
+
+    public Date getTglLahirMahasiswa() {
+        return tglLahirMahasiswa;
+    }
+
+    public void setTglLahirMahasiswa(Date tglLahirMahasiswa) {
+        this.tglLahirMahasiswa = tglLahirMahasiswa;
     }
 
     public String getEmailMahasiswa() {
@@ -53,22 +72,6 @@ public class Mahasiswa {
 
     public void setNamaMahasiswa(String namaMahasiswa) {
         this.namaMahasiswa = namaMahasiswa;
-    }
-
-    public char getJenisKelamin() {
-        return jenisKelaminMahasiswa;
-    }
-
-    public void setJenisKelamin(char jenisKelamin) {
-        this.jenisKelaminMahasiswa = jenisKelamin;
-    }
-
-    public Date getTglLahir() {
-        return tglLahirMahasiswa;
-    }
-
-    public void setTglLahir(Date tglLahir) {
-        this.tglLahirMahasiswa = tglLahir;
     }
 
     public String getAsalUniversitas() {

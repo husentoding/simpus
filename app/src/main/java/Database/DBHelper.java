@@ -1,4 +1,4 @@
-package Database;
+package pemula.simpus.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
@@ -20,6 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COLUMN_SISWA_ID = "id";
     public static final String COLUMN_SISWA_EMAIL = "email";
     public static final String COLUMN_SISWA_PASSWORD ="password";
+    public static final String COLUMN_SISWA_NAMA = "nama";
     public static final String COLUMN_SISWA_KELAMIN = "jenis_kelamin";
     public static final String COLUMN_SISWA_TANGGALLAHIR = "tgl_lahir";
     public static final String COLUMN_SISWA_ASALSEKOLAH = "asal_sekolah";
@@ -69,8 +70,9 @@ public class DBHelper extends SQLiteOpenHelper {
             + COLUMN_SISWA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COLUMN_SISWA_EMAIL + " TEXT NOT NULL, "
             + COLUMN_SISWA_PASSWORD + " TEXT NOT NULL, "
+            + COLUMN_SISWA_NAMA + " TEXT NOT NULL, "
             + COLUMN_SISWA_KELAMIN + " TEXT, "
-            + COLUMN_SISWA_TANGGALLAHIR + " DATE, " // CHECK LATER
+            + COLUMN_SISWA_TANGGALLAHIR + " TEXT, "
             + COLUMN_SISWA_ASALSEKOLAH + " TEXT NOT NULL, "
             + COLUMN_SISWA_PIL1 + "TEXT, "
             + COLUMN_SISWA_PIL2 + "TEXT, "
@@ -94,7 +96,7 @@ public class DBHelper extends SQLiteOpenHelper {
             + COLUMN_MAHASISWA_PASSWORD + " TEXT NOT NULL, "
             + COLUMN_MAHASISWA_NAMA + " TEXT NOT NULL, "
             + COLUMN_MAHASISWA_KELAMIN + " TEXT, "
-            + COLUMN_MAHASISWA_TANGGALLAHIR + " DATE, " //CHECK LATER
+            + COLUMN_MAHASISWA_TANGGALLAHIR + " TEXT, "
             + COLUMN_MAHASISWA_ASALUNIVERSITAS + " TEXT NOT NULL "
             +");";
 
@@ -103,7 +105,7 @@ public class DBHelper extends SQLiteOpenHelper {
             + COLUMN_UNIVERSITAS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COLUMN_UNIVERSITAS_NAMA + " TEXT NOT NULL, "
             + COLUMN_UNIVERSITAS_ALAMAT + " TEXT NOT NULL, "
-            + COLUMN_UNIVERSITAS_TANGGALPENTING + " DATE, "
+            + COLUMN_UNIVERSITAS_TANGGALPENTING + " TEXT, "
             + COLUMN_UNIVERSITAS_JALURMASUK + " TEXT, "
             + COLUMN_UNIVERSITAS_BERITAPENTING + " TEXT "
             +");";
@@ -113,8 +115,8 @@ public class DBHelper extends SQLiteOpenHelper {
             + COLUMN_JURUSAN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COLUMN_JURUSAN_UNIVERSITAS + " TEXT NOT NULL, "
             + COLUMN_JURUSAN_NAMA + " TEXT NOT NULL, "
-            + COLUMN_JURUSAN_AKREDITASI + " DATE, "
-            + COLUMN_JURUSAN_PASSINGGRADE + " TEXT "
+            + COLUMN_JURUSAN_AKREDITASI + " TEXT, "
+            + COLUMN_JURUSAN_PASSINGGRADE + " DOUBLE "
             +");";
 
     public DBHelper(Context context) {

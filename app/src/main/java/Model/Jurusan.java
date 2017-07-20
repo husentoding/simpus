@@ -1,4 +1,4 @@
-package Model;
+package pemula.simpus.model;
 
 /**
  * Created by Evlive-Tenshi-PC on 7/5/2017.
@@ -6,17 +6,28 @@ package Model;
 
 public class Jurusan {
 
-    private Integer idJurusan;
+    private long idJurusan;
     private Universitas universitas;
     private String namaFakultas;
     private String akreditasi;
     private double passingGrade;
+
+    public Jurusan() {
+    }
 
     public Jurusan(Universitas universitas, String namaFakultas, String akreditasi, double passingGrade) {
         this.universitas = universitas;
         this.namaFakultas = namaFakultas;
         this.akreditasi = akreditasi;
         this.passingGrade = passingGrade;
+    }
+
+    public long getIdJurusan() {
+        return idJurusan;
+    }
+
+    public void setIdJurusan(long idJurusan) {
+        this.idJurusan = idJurusan;
     }
 
     public Universitas getUniversitas() {

@@ -1,4 +1,4 @@
-package Model;
+package pemula.simpus.model;
 
 import java.util.Date;
 
@@ -8,16 +8,16 @@ import java.util.Date;
 
 public class Siswa {
 
-    private Integer idSiswa;
+    private long idSiswa;
     private String emailSiswa;
     private String passwordSiswa;
     private String namaSiswa;
-    private char jenisKelaminSiswa;
+    private String jenisKelaminSiswa;
     private Date tglLahirSiswa;
     private String asalSekolah;
     private String pil1;
     private String pil2;
-    private boolean premium;
+    private String premium;
     private Universitas universitas1;
     private Universitas universitas2;
     private Universitas universitas3;
@@ -29,13 +29,16 @@ public class Siswa {
     private Universitas universitas9;
     private Universitas universitas10;
 
+    public Siswa() {
+    }
+
     public Siswa(String emailSiswa, String passwordSiswa, String namaSiswa, String asalSekolah, String pil1) {
         this.emailSiswa = emailSiswa;
         this.passwordSiswa = passwordSiswa;
         this.namaSiswa = namaSiswa;
         this.asalSekolah = asalSekolah;
         this.pil1 = pil1;
-        this.premium = false;
+        this.premium = "N";
     }
 
     public Siswa(String emailSiswa, String passwordSiswa, String namaSiswa, String asalSekolah, String pil1, String pil2) {
@@ -45,14 +48,14 @@ public class Siswa {
         this.asalSekolah = asalSekolah;
         this.pil1 = pil1;
         this.pil2 = pil2;
-        this.premium = false;
+        this.premium = "N";
     }
 
-    public Integer getIdSiswa() {
+    public long getIdSiswa() {
         return idSiswa;
     }
 
-    public void setIdSiswa(Integer idSiswa) {
+    public void setIdSiswa(long idSiswa) {
         this.idSiswa = idSiswa;
     }
 
@@ -80,11 +83,11 @@ public class Siswa {
         this.namaSiswa = namaSiswa;
     }
 
-    public char getJenisKelaminSiswa() {
+    public String getJenisKelaminSiswa() {
         return jenisKelaminSiswa;
     }
 
-    public void setJenisKelaminSiswa(char jenisKelaminSiswa) {
+    public void setJenisKelaminSiswa(String jenisKelaminSiswa) {
         this.jenisKelaminSiswa = jenisKelaminSiswa;
     }
 
@@ -120,11 +123,11 @@ public class Siswa {
         this.pil2 = pil2;
     }
 
-    public boolean isPremium() {
+    public String getPremium() {
         return premium;
     }
 
-    public void setPremium(boolean premium) {
+    public void setPremium(String premium) {
         this.premium = premium;
     }
 

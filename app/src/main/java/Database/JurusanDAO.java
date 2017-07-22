@@ -48,6 +48,7 @@ public class JurusanDAO {
     }
 
     public Jurusan createJurusan(String namaUniversitas, String namaFakultas, String akreditasi, double passingGrade) {
+        open();
         ContentValues values = new ContentValues();
         values.put(DBHelper.COLUMN_JURUSAN_UNIVERSITAS, namaUniversitas);
         values.put(DBHelper.COLUMN_JURUSAN_NAMA, namaFakultas);

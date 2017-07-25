@@ -1,5 +1,6 @@
 package com.example.user.simpus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -92,10 +93,8 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.frameLayout, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_listuniversitas) {
-            ListUniversitas fragment= new ListUniversitas();
-            FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.frameLayout, fragment);
-            fragmentTransaction.commit();
+            Intent ListUniv = new Intent(MainActivity.this, ListUniv.class);
+            MainActivity.this.startActivity(ListUniv);
 
         } else if (id == R.id.nav_soal) {
 
